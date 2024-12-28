@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         <Row justify="space-between" align="middle">
           <Col>
             <Link href="/">
-              <Image src={LogoIcon} width={200} height={60} alt="logo" />
+              <Image src={LogoIcon} width={180} height={48} alt="logo" />
             </Link>
           </Col>
           <Col className="text-lg mt-4">
