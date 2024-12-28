@@ -11,7 +11,7 @@ const menuItems = [
   { key: "1", label: <Link href="/">Home</Link> },
   { key: "2", label: <Link href="/services">Services</Link> },
   { key: "3", label: <Link href="/contact">Contact Us</Link> },
-  { key: "4", label: <Link href="/about">Careers</Link> },
+  { key: "4", label: <Link href="/careers">Careers</Link> },
 ];
 
 const AppHeader: React.FC = () => {
