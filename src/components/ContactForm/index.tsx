@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Form, Input, Card, Result, Button } from "antd";
+import { Form, Input, Card, Result, Button, Alert } from "antd";
 import Link from "next/link";
 
 interface FormValues {
@@ -15,14 +15,36 @@ export default function AppForm() {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isError, setIsError] = useState(false);
 
-  const onFinish = (values: FormValues) => {
+  const onFinish = async (values: FormValues) => {
     console.log("Form submitted:", values);
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      // Send data to API
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error(result.error); // Handle errors (e.g., show a message to the user)
+        setIsError(true);
+      }
+    } catch (error) {
+      console.error("Error:", error); // Handle unexpected errors
+      setIsError(true);
+    } finally {
       setLoading(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   return (
@@ -107,6 +129,14 @@ export default function AppForm() {
                 </Button>
               </Form.Item>
             </Form>
+            {isError && !loading && (
+              <Alert
+                message="Some thing went wrong."
+                description="We are sorting this issue. Please check back later."
+                type="error"
+                showIcon
+              />
+            )}
           </>
         ) : (
           <Result
