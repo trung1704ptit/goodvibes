@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Menu, Drawer, Button } from "antd";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import { Menu, Drawer, Button, List } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import logoImg from "../../../public/logo.png";
 import Link from "next/link";
+import { menus } from "@/utils/constants";
 
 const menuItems = [
   { key: "1", label: <Link href="/">Home</Link> },
@@ -19,9 +20,9 @@ const AppHeader: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Toggle Drawer
-  const toggleDrawer = () => {
+  const toggleDrawer = useCallback(() => {
     setDrawerVisible(!drawerVisible);
-  };
+  }, [drawerVisible]);
 
   // Update `isMobile` state based on screen width
   const handleResize = () => {
@@ -33,7 +34,6 @@ const AppHeader: React.FC = () => {
     }
   };
 
-  // Add event listener for window resize
   useEffect(() => {
     handleResize(); // Initialize on load
     window.addEventListener("resize", handleResize);
@@ -42,6 +42,14 @@ const AppHeader: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const menuMobileItem = useMemo(() => menus.map((item) => {
+    return (
+      <Link href={item.path} key={item.path} onClick={toggleDrawer}>
+        {item.name}
+      </Link>
+    );
+  }), [toggleDrawer]);
 
   return (
     <header className="w-full bg-white shadow-md z-50">
@@ -84,10 +92,10 @@ const AppHeader: React.FC = () => {
         open={drawerVisible}
         className="md:hidden"
       >
-        <Menu
-          mode="vertical"
-          className="bg-transparent border-none"
-          items={menuItems} // Use the items prop instead of children
+        <List
+          size="large"
+          dataSource={menuMobileItem}
+          renderItem={(item) => <List.Item>{item}</List.Item>}
         />
       </Drawer>
     </header>
