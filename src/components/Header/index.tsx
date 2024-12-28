@@ -1,19 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { Menu, Drawer, Button } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import React, { useState, useEffect } from "react";
+import { Menu, Drawer, Button } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import Image from "next/image";
+import logoImg from "../../../public/logo.png";
+import Link from "next/link";
+
+const menuItems = [
+  { key: "1", label: <Link href="/">Home</Link> },
+  { key: "2", label: <Link href="/services">Services</Link> },
+  { key: "3", label: <Link href="/contact">Contact Us</Link> },
+  { key: "4", label: <Link href="/about">Careers</Link> },
+];
 
 const AppHeader: React.FC = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  const menuItems = [
-    { key: '1', label: <a href="#home">Home</a> },
-    { key: '2', label: <a href="#about">About</a> },
-    { key: '3', label: <a href="#services">Services</a> },
-    { key: '4', label: <a href="#contact">Contact</a> },
-  ];
 
   // Toggle Drawer
   const toggleDrawer = () => {
@@ -33,26 +36,28 @@ const AppHeader: React.FC = () => {
   // Add event listener for window resize
   useEffect(() => {
     handleResize(); // Initialize on load
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header className="w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">MyApp</div>
+        <Link href={"/"}>
+          <Image src={logoImg} width={250} height={70} alt="logo" />
+        </Link>
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <div className="hidden md:flex space-x-6">
+          <div className="flex justify-end w-full">
             <Menu
               mode="horizontal"
-              items={menuItems}
-              className="bg-transparent border-none"
+              className="bg-transparent border-none w-full text-lg"
+              items={menuItems} // Use the items prop instead of children
             />
           </div>
         )}
@@ -67,17 +72,22 @@ const AppHeader: React.FC = () => {
         )}
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer */}
       <Drawer
-        title="Menu"
+        title={
+          <Link href={"/"}>
+            <Image src={logoImg} width={250} height={70} alt="logo" />
+          </Link>
+        }
         placement="right"
         onClose={toggleDrawer}
         open={drawerVisible}
+        className="md:hidden"
       >
         <Menu
           mode="vertical"
-          items={menuItems}
-          className="bg-transparent"
+          className="bg-transparent border-none"
+          items={menuItems} // Use the items prop instead of children
         />
       </Drawer>
     </header>
