@@ -21,7 +21,7 @@ export default function AppForm() {
     setTimeout(() => {
       setLoading(false);
       setIsSubmitted(true);
-    }, 3000); // Simulated delay
+    }, 1500);
   };
 
   const resetForm = () => {
@@ -30,7 +30,7 @@ export default function AppForm() {
   };
 
   return (
-    <div className="flex justify-center items-start pt-12 min-h-screen bg-gray-100">
+    <div className="flex justify-center items-start py-12 bg-gray-100">
       <Card
         className="w-full max-w-lg shadow-lg rounded-xl p-2 bg-white m-3"
         bordered={false}

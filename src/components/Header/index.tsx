@@ -48,12 +48,12 @@ const AppHeader: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href={"/"}>
-          <Image src={logoImg} width={250} height={70} alt="logo" />
+          <Image src={logoImg} width={200} height={60} alt="logo" />
         </Link>
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <div className="flex justify-end w-full">
+          <div className="flex justify-end w-full pl-6">
             <Menu
               mode="horizontal"
               className="bg-transparent border-none w-full text-lg"
