@@ -45,7 +45,7 @@ const JobListing: React.FC = () => {
               title={job.title}
               bordered={false}
               extra={<Tag color="blue">{job.employmentType}</Tag>}
-              style={{ marginBottom: "20px" }}
+              className="fade-in-up mb-6"
             >
               <p><strong>Company:</strong> {job.company}</p>
               <p><strong>Location:</strong> {job.location}</p>
