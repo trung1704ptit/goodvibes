@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col, Tag } from "antd";
+import Title from "antd/es/typography/Title";
 
 // Mock job data
 const jobs = [
@@ -30,13 +31,12 @@ const jobs = [
     datePosted: "1 week ago",
     employmentType: "Full-time",
   },
-  // Add more job listings as needed
 ];
 
 const JobListing: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-10">
-      <h2>Job Listings</h2>
+      <Title level={3}>Job Listings</Title>
       <Row gutter={[16, 16]}>
         {jobs.map((job) => (
           <Col xs={24} key={job.id}>

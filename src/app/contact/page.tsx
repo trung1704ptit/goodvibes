@@ -4,7 +4,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const ContactUsForm = dynamic(() => import("../../components/AppForm"), {
+const ContactUsForm = dynamic(() => import("../../components/ContactForm"), {
   ssr: false,
 });
 

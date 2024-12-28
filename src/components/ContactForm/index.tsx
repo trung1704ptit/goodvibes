@@ -99,17 +99,16 @@ export default function AppForm() {
               </Form.Item>
 
               <Form.Item>
-                <button
-                  className={`w-full text-white px-4 h-12 text-lg rounded-md transition bg-blue-600 ${
-                    loading
-                      ? " cursor-not-allowed opacity-50"
-                      : "hover:bg-blue-600 active:bg-blue-700"
-                  }`}
-                  type="submit"
+                <Button
+                  type="primary"
+                  size="large"
+                  htmlType="submit"
+                  className="w-full shadow-none"
                   disabled={loading}
+                  loading={loading}
                 >
                   Submit
-                </button>
+                </Button>
               </Form.Item>
             </Form>
           </>
