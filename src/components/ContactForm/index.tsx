@@ -131,7 +131,7 @@ export default function AppForm() {
             </Form>
             {isError && !loading && (
               <Alert
-                message="Some thing went wrong."
+                message="Something went wrong."
                 description="We are sorting this issue. Please check back later."
                 type="error"
                 showIcon
