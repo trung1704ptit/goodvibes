@@ -4,9 +4,10 @@ import React from "react";
 import { Layout, Space } from "antd";
 import Link from "next/link";
 import { Row, Col } from "antd";
-import LogoIcon from "../../../public/logo.png";
 import Image from "next/image";
 import { menus } from "@/utils/constants";
+import LogoIcon from "../../../public/logo.png";
+
 
 const Footer: React.FC = () => {
   return (

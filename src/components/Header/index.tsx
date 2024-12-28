@@ -1,23 +1,19 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
+import { usePathname } from "next/navigation"; // Import for current path
 import { Menu, Drawer, Button, List } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Image from "next/image";
-import logoImg from "../../../public/logo.png";
 import Link from "next/link";
 import { menus } from "@/utils/constants";
+import logoImg from "../../../public/logo.png";
 
-const menuItems = [
-  { key: "1", label: <Link href="/">Home</Link> },
-  { key: "2", label: <Link href="/services">Services</Link> },
-  { key: "3", label: <Link href="/contact">Contact Us</Link> },
-  { key: "4", label: <Link href="/careers">Careers</Link> },
-];
 
 const AppHeader: React.FC = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname(); // Get the current path
 
   // Toggle Drawer
   const toggleDrawer = useCallback(() => {
@@ -43,13 +39,24 @@ const AppHeader: React.FC = () => {
     };
   }, []);
 
-  const menuMobileItem = useMemo(() => menus.map((item) => {
-    return (
-      <Link href={item.path} key={item.path} onClick={toggleDrawer}>
-        {item.name}
-      </Link>
-    );
-  }), [toggleDrawer]);
+  const menuItems = useMemo(
+    () =>
+      menus.map((item) => ({
+        key: item.path,
+        label: <Link href={item.path}>{item.name}</Link>,
+      })),
+    []
+  );
+
+  const menuMobileItems = useMemo(
+    () =>
+      menus.map((item) => (
+        <Link href={item.path} key={item.path} onClick={toggleDrawer}>
+          {item.name}
+        </Link>
+      )),
+    [toggleDrawer]
+  );
 
   return (
     <header className="w-full bg-white shadow-md z-50">
@@ -66,6 +73,7 @@ const AppHeader: React.FC = () => {
               mode="horizontal"
               className="bg-transparent border-none w-full text-lg"
               items={menuItems} // Use the items prop instead of children
+              selectedKeys={[pathname]} // Set the active menu item
             />
           </div>
         )}
@@ -94,7 +102,7 @@ const AppHeader: React.FC = () => {
       >
         <List
           size="large"
-          dataSource={menuMobileItem}
+          dataSource={menuMobileItems}
           renderItem={(item) => <List.Item>{item}</List.Item>}
         />
       </Drawer>

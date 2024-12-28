@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Form, Input, Card, Result, Button } from "antd";
+import Link from "next/link";
 
 interface FormValues {
   name: string;
@@ -22,11 +23,6 @@ export default function AppForm() {
       setLoading(false);
       setIsSubmitted(true);
     }, 1500);
-  };
-
-  const resetForm = () => {
-    form.resetFields();
-    setIsSubmitted(false);
   };
 
   return (
@@ -118,9 +114,11 @@ export default function AppForm() {
             title="Submission Successful!"
             subTitle="Thank you for contacting us. We will get back to you shortly."
             extra={[
-              <Button type="primary" key="reset" onClick={resetForm}>
-                Give us an other message
-              </Button>,
+              <Link href={"/"} key="back">
+                <Button type="primary" className="shadow-none">
+                  Go Home Page
+                </Button>
+              </Link>,
             ]}
           />
         )}
