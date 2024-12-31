@@ -1,18 +1,25 @@
+export const routes = {
+  home: '/',
+  services: '/services',
+  contact: '/contact',
+  careers: '/careers'
+}
+
 export const menus = [
   {
     name: "Home",
-    path: "/",
+    path: routes.home,
   },
   {
     name: "Services",
-    path: "/services",
+    path: routes.services,
   },
   {
     name: "Contact Us",
-    path: "/contact",
+    path: routes.contact,
   },
   {
     name: "Careers",
-    path: "/careers",
+    path: routes.careers,
   },
 ];

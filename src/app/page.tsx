@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { CheckCircleOutlined } from "@ant-design/icons";
 import FeaturesSection from "@/components/Features";
+import { Button } from "antd";
+import Link from "next/link";
+import { routes } from "@/utils/constants";
 
 const HRPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,11 +15,11 @@ const HRPage = () => {
   }, []);
 
   return (
-    <div>
-      <div className="container flex flex-wrap mx-auto max-w-7xl my-16">
+    <div className="bg-[rgba(23,162,183,0.3)]">
+      <div className="container flex flex-wrap mx-auto max-w-7xl p-24">
         {/* Left Section */}
         <div
-          className={`flex-1 min-w-[300px] bg-slate-50 p-8 rounded transform ${
+          className={`flex-1 min-w-[300px] p-8 rounded transform ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           } transition-all duration-1000 ease-out`}
         >
@@ -26,7 +29,9 @@ const HRPage = () => {
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             Global Knowledge and Local Expertise
           </h1>
-          <p className="text-md">Human Resources and Payroll</p>
+          <p className="text-md mb-4">Human Resources and Payroll</p>
+
+          <Link href={routes.contact}><Button size="large" type="primary" className="w-[200px] shadow-none">Contact Us</Button></Link>
         </div>
 
         {/* Right Section */}

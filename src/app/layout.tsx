@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
-// import "antd/dist/reset.css"; // Import Ant Design's reset styles
 import "./globals.css";
 import AppHeader from "@/components/Header";
 import Footer from "@/components/Footer";
