@@ -60,10 +60,10 @@ const AppHeader: React.FC = () => {
 
   return (
     <header className="w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-1">
         {/* Logo */}
         <Link href={"/"}>
-          <Image src={logoImg} width={180} height={48} alt="logo" />
+          <Image src={logoImg} width={100} height={100} alt="logo" />
         </Link>
 
         {/* Desktop Menu */}
@@ -92,7 +92,7 @@ const AppHeader: React.FC = () => {
       <Drawer
         title={
           <Link href={"/"}>
-            <Image src={logoImg} width={180} height={48} alt="logo" />
+            <Image src={logoImg}  width={100} height={100} alt="logo" />
           </Link>
         }
         placement="right"

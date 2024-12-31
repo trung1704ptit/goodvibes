@@ -14,7 +14,7 @@ const karla = Karla({
 });
 
 export const metadata: Metadata = {
-  title: "HR Solutions",
+  title: "Good Vibes IT Solutions",
   description: "Find your next career path",
 };
 
@@ -28,8 +28,8 @@ export default function RootLayout({
       <ConfigProvider
         theme={{
           token: {
-            colorPrimary: "#1DA57A",
-            colorLink: "#1DA57A",
+            colorPrimary: "#17a2b7",
+            colorLink: "#17a2b7",
           },
         }}
       >
