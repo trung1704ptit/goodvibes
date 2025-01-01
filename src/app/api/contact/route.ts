@@ -14,29 +14,31 @@ export async function POST(req: NextRequest) {
     // Parse incoming JSON request body
     const { name, email, phone, message }: ContactFormData = await req.json();
 
-    console.log(' name, email, phone, message:',  name, email, phone, message)
+    console.log('Received data:', name, email, phone, message);
 
     // Validate data
-    if (!name || !email || !phone) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json(
         { error: 'All fields are required.' },
         { status: 400 }
       );
     }
 
-    // Create Nodemailer transporter
+    // Create Nodemailer transporter for GoDaddy SMTP
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      host: 'smtpout.secureserver.net', // GoDaddy SMTP server
+      port: 465, // Secure SSL port
+      secure: true, // Use SSL
       auth: {
-        user: process.env.EMAIL_USER!, // Use environment variables for email credentials
-        pass: process.env.EMAIL_PASS!, // Never hardcode sensitive info in the code
+        user: process.env.GODADDY_EMAIL!, // Your GoDaddy email address
+        pass: process.env.GODADDY_PASSWORD!, // Your GoDaddy email password
       },
     });
 
     // Set up email details
     const mailOptions = {
-      from: process.env.EMAIL_USER!,
-      to: process.env.RECIPIENT_EMAIL!,
+      from: process.env.GODADDY_EMAIL!, // Sender email address
+      to: process.env.RECIPIENT_EMAIL!, // Recipient email address
       subject: 'Contact Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
@@ -50,7 +52,7 @@ export async function POST(req: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error(error);
+    console.error('Error sending email:', error);
     return NextResponse.json(
       { error: 'There was an error processing your request.' },
       { status: 500 }
