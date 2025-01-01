@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
         </Row>
         <Row justify="center" className="mt-5">
           <Col>
-            <span>&copy; 2024 Your Company. All Rights Reserved.</span>
+            <span>&copy; 2025 Good Vibes IT Solutions. All Rights Reserved.</span>
           </Col>
         </Row>
       </div>

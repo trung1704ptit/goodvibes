@@ -16,10 +16,10 @@ const HRPage = () => {
 
   return (
     <div className="bg-[rgba(23,162,183,0.3)]">
-      <div className="container flex flex-wrap mx-auto max-w-7xl p-24">
+      <div className="container flex flex-wrap mx-auto max-w-7xl p-6 md:p-24">
         {/* Left Section */}
         <div
-          className={`flex-1 min-w-[300px] p-8 rounded transform ${
+          className={`flex-1 min-w-[300px] p-4 md:p-8 rounded transform ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           } transition-all duration-1000 ease-out`}
         >
@@ -36,7 +36,7 @@ const HRPage = () => {
 
         {/* Right Section */}
         <div
-          className={`flex-1 min-w-[300px] p-10 font-medium transform ${
+          className={`flex-1 min-w-[300px] p-4 md:p-10 font-medium transform ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           } transition-all duration-1000 ease-out`}
         >

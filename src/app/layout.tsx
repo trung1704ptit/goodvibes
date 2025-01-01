@@ -14,7 +14,7 @@ const karla = Karla({
 
 export const metadata: Metadata = {
   title: "Good Vibes IT Solutions",
-  description: "Find your next career path",
+  description: "Find your next career path at Good Vibes IT Solutions",
 };
 
 export default function RootLayout({

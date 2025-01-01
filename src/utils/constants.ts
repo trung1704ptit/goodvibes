@@ -23,3 +23,6 @@ export const menus = [
     path: routes.careers,
   },
 ];
+
+
+export const contactEmail = 'contactus@goodvibesitsolution.com'
