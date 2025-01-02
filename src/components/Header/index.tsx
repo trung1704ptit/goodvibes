@@ -2,13 +2,12 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { usePathname } from "next/navigation"; // Import for current path
-import { Menu, Drawer, Button, List } from "antd";
+import { Drawer, Button, List } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { menus } from "@/utils/constants";
 import logoImg from "../../../public/logo.png";
-
 
 const AppHeader: React.FC = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -39,20 +38,11 @@ const AppHeader: React.FC = () => {
     };
   }, []);
 
-  const menuItems = useMemo(
-    () =>
-      menus.map((item) => ({
-        key: item.path,
-        label: <Link href={item.path}>{item.name}</Link>,
-      })),
-    []
-  );
-
   const menuMobileItems = useMemo(
     () =>
-      menus.map((item) => (
-        <Link href={item.path} key={item.path} onClick={toggleDrawer}>
-          {item.name}
+      menus.map((menu) => (
+        <Link href={menu.path} key={menu.path} onClick={toggleDrawer}>
+          {menu.name}
         </Link>
       )),
     [toggleDrawer]
@@ -68,14 +58,28 @@ const AppHeader: React.FC = () => {
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <div className="flex justify-end w-full pl-6">
-            <Menu
-              mode="horizontal"
-              className="bg-transparent border-none w-full text-lg"
-              items={menuItems} // Use the items prop instead of children
-              selectedKeys={[pathname]} // Set the active menu item
-            />
-          </div>
+          <nav>
+            <ul className="flex space-x-6">
+              {menus.map((menu, index) => {
+                const isActive = pathname === menu.path;
+                return (
+                  <li key={index}>
+                    <Link href={menu.path}>
+                      <span
+                        className={`font-medium pb-3 ${
+                          isActive
+                            ? "text-primary border-b-2 border-[#17a2b7]"
+                            : "hover:text-[#17a2b7]"
+                        }`}
+                      >
+                        {menu.name}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         )}
 
         {/* Mobile Menu Button */}
@@ -92,7 +96,7 @@ const AppHeader: React.FC = () => {
       <Drawer
         title={
           <Link href={"/"}>
-            <Image src={logoImg}  width={100} height={100} alt="logo" />
+            <Image src={logoImg} width={100} height={100} alt="logo" />
           </Link>
         }
         placement="right"
@@ -103,7 +107,9 @@ const AppHeader: React.FC = () => {
         <List
           size="large"
           dataSource={menuMobileItems}
-          renderItem={(item) => <List.Item>{item}</List.Item>}
+          renderItem={(item) => (
+            <List.Item>{item}</List.Item>
+          )}
         />
       </Drawer>
     </header>
