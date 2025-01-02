@@ -5,6 +5,9 @@ import FeaturesSection from "@/components/Features";
 import { Button } from "antd";
 import Link from "next/link";
 import { routes } from "@/utils/constants";
+import ComingSoon from "@/components/CommingSoon";
+
+const ready = false;
 
 const HRPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +16,10 @@ const HRPage = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  if (!ready) {
+    return <ComingSoon />
+  }
 
   return (
     <div className="bg-[rgba(23,162,183,0.3)]">

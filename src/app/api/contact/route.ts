@@ -30,8 +30,8 @@ export async function POST(req: NextRequest) {
       port: 465, // Secure SSL port
       secure: true, // Use SSL
       auth: {
-        user: process.env.GODADDY_EMAIL!, // Your GoDaddy email address
-        pass: process.env.GODADDY_PASSWORD!, // Your GoDaddy email password
+        user: process.env.GODADDY_EMAIL, // Your GoDaddy email address
+        pass: "Goodvibes@123", // Your GoDaddy email password
       },
     });
 
