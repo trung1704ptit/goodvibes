@@ -1,6 +1,7 @@
 // app/api/contact/route.ts
 import nodemailer from 'nodemailer';
 import { NextRequest, NextResponse } from 'next/server';
+import { emailTemplate } from '@/utils/mail';
 
 interface ContactFormData {
   name: string;
@@ -26,9 +27,8 @@ export async function POST(req: NextRequest) {
 
     // Create Nodemailer transporter for GoDaddy SMTP
     const transporter = nodemailer.createTransport({
-      host: 'smtpout.secureserver.net', // GoDaddy SMTP server
-      port: 465, // Secure SSL port
-      secure: true, // Use SSL
+      host: "smtp-mail.outlook.com",
+      port: 587,
       auth: {
         user: process.env.GODADDY_EMAIL, // Your GoDaddy email address
         pass: process.env.GODADDY_PASSWORD, // Your GoDaddy email password
@@ -37,10 +37,10 @@ export async function POST(req: NextRequest) {
 
     // Set up email details
     const mailOptions = {
-      from: process.env.GODADDY_EMAIL!, // Sender email address
-      to: process.env.RECIPIENT_EMAIL!, // Recipient email address
-      subject: 'Contact Form Submission',
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+      from: `"Good Vibes IT Solutions" <${process.env.GODADDY_EMAIL}>`, // Name and email address
+      to: email, // Recipient email address
+      subject: 'We received your contact form submission',
+      html: emailTemplate(name, email, phone, message), // Your email template
     };
 
     // Send the email
