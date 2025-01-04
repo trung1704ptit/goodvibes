@@ -48,9 +48,9 @@ export default function AppForm() {
   };
 
   return (
-    <div className="flex justify-center items-start py-12 bg-gray-100 fade-in-up">
+    <div className="flex justify-center items-start py-12 bg-gray-100 min-h-full">
       <Card
-        className="w-full max-w-lg shadow-lg rounded-xl p-2 bg-white m-3"
+        className="w-full max-w-lg shadow-lg rounded-xl p-2 bg-white m-3 fade-in-up"
         bordered={false}
       >
         {!isSubmitted ? (
