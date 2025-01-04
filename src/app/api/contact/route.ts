@@ -39,7 +39,8 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: `"Good Vibes IT Solutions" <${process.env.GODADDY_EMAIL}>`, // Name and email address
       to: email, // Recipient email address
-      subject: 'We received your contact form submission',
+      bcc: 'jitendrajain76@gmail.com', // BCC recipient email address
+      subject: 'Thanks for Connecting with Good Vibes IT Solutions!',
       html: emailTemplate(name, email, phone, message), // Your email template
     };
 
