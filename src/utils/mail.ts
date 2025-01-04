@@ -67,11 +67,10 @@ const emailTemplate = (
               <li><strong>Message:</strong> ${message}</li>
             </ul>
             <p>We’ll get back to you soon.</p>
+            <p>Good Vibes IT Solutions team</p>
           </div>
-          <div class="footer">
-            <p>If you need immediate assistance, feel free to reply to this email or contact us directly.</p>
-            <p><a href="mailto:${process.env.GODADDY_EMAIL}">Reply to this email</a></p>
-          </div>
+          <p>If you need immediate assistance, feel free to reply to this email or contact us directly.</p>
+          <p><a href="mailto:${process.env.GODADDY_EMAIL}">Reply to this email</a></p>
         </div>
       </body>
       </html>

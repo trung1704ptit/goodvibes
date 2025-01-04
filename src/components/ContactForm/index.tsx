@@ -108,7 +108,16 @@ export default function AppForm() {
                 />
               </Form.Item>
 
-              <Form.Item label="Message" name="message">
+              <Form.Item
+                label="Message"
+                name="message"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please give us a message!",
+                  },
+                ]}
+              >
                 <Input.TextArea
                   placeholder="Enter a message"
                   rows={5}
