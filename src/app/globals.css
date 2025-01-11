@@ -5,6 +5,16 @@
 :root {
   --background: #f3f4f6;
   --foreground: #171717;
+  --main-color: #17a2b7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--main-color);
+  font-family: Quicksand;
+}
+
+a:hover {
+  color: var(--main-color)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +27,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: Quicksand;
 }
 .ant-menu-item-selected {
   padding-bottom: 12px;

@@ -50,7 +50,7 @@ const AppHeader: React.FC = () => {
 
   return (
     <header className="w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-1">
+      <div className="container mx-auto flex items-center justify-between px-4 py-1">
         {/* Logo */}
         <Link href={"/"}>
           <Image src={logoImg} width={100} height={100} alt="logo" />
@@ -66,7 +66,7 @@ const AppHeader: React.FC = () => {
                   <li key={index}>
                     <Link href={menu.path}>
                       <span
-                        className={`font-medium pb-3 ${
+                        className={`font-medium pb-3 text-lg ${
                           isActive
                             ? "text-primary border-b-2 border-[#17a2b7]"
                             : "hover:text-[#17a2b7]"

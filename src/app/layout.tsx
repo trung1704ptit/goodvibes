@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Karla } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import AppHeader from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ConfigProvider } from "antd";
 
-// Load the Karla font
-const karla = Karla({
-  variable: "--font-karla",
-  subsets: ["latin"], // Specify subsets
-  weight: ["400", "700"], // Include font weights you need
+const quicksand = Quicksand({
+  subsets: ['latin'], // You can add more subsets if needed.
+  weight: ['400', '500', '600', '700'], // Select specific font weights.
 });
+
 
 export const metadata: Metadata = {
   title: "Good Vibes IT Solutions",
@@ -32,7 +31,7 @@ export default function RootLayout({
           },
         }}
       >
-        <body className={`${karla.variable} antialiased`}>
+        <body className={`${quicksand.className} antialiased`}>
           <AppHeader />
           {children}
           <Footer />

@@ -12,7 +12,7 @@ import LogoIcon from "../../../public/logo.png";
 const Footer: React.FC = () => {
   return (
     <Layout.Footer className="bg-slate-900 text-white p-6 md:py-11">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <Row justify="space-between" align="middle">
           <Col>
             <Link href="/">

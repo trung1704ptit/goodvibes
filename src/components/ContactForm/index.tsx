@@ -48,14 +48,12 @@ export default function AppForm() {
   };
 
   return (
-    <div className="flex justify-center items-start py-12 bg-gray-100 min-h-full">
-      <Card
-        className="w-full max-w-lg shadow-lg rounded-xl p-2 bg-white m-3 fade-in-up"
-        bordered={false}
-      >
+    <div className="flex justify-center items-start py-12 bg-white min-h-full">
+      <Card className="w-full max-w-lg shadow-lg rounded-xl p-2 m-3 fade-in-up">
         {!isSubmitted ? (
           <>
-            <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+            <h4 className="text-center text-gray-600 text-xl mb-10">Happy to answer all your questions</h4>
+
             <Form form={form} layout="vertical" onFinish={onFinish}>
               <Form.Item
                 label="Name"
