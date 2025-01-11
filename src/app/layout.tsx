@@ -13,7 +13,7 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: "Good Vibes IT Solutions",
-  description: "Find your next career path at Good Vibes IT Solutions",
+  description: "At Good Vibes IT Solutions, we specialize in providing comprehensive IT solutions designed to drive your business forward",
 };
 
 export default function RootLayout({
