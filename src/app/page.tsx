@@ -13,9 +13,9 @@ const HomePage = () => {
             <h1
               data-aos="fade-right"
               data-aos-once="true"
-              className="my-4 text-5xl font-bold leading-tight text-darken aos-init aos-animate"
+              className="my-4 text-4xl md:text-5xl font-bold leading-tight text-darken aos-init aos-animate"
             >
-              <span className="text-yellow-500">Good Vibes IT Solutions</span>
+              Good Vibes IT Solutions
             </h1>
             <p
               data-aos="fade-down"
@@ -25,7 +25,8 @@ const HomePage = () => {
             >
               One-Stop HR Solutions
             </p>
-            <p className="lg:max-w-[500px] mb-10">We provide one stop HR solutions specifically to meet basic or
+            <p className="lg:max-w-[500px] mb-10">
+              We provide one stop HR solutions specifically to meet basic or
               complex payroll and HR administration for businesses. With more
               than 100 experienced consultants globally, our team can assist
               with local payroll processing as well as regional payroll
@@ -187,18 +188,18 @@ const HomePage = () => {
           data-aos="flip-up"
           className="max-w-xl mx-auto text-center mt-24 aos-init aos-animate"
         >
-          <h1 className="font-bold text-darken my-3 text-2xl">
-            All-In-One <span className="text-yellow-500">Cloud Software.</span>
+          <h1 className="font-bold text-darken my-3 text-4xl md:text-6xl">
+            Our Expertise
           </h1>
-          <p className="leading-relaxed text-gray-500">
-            GoodVibes is one powerful online software suite that combines all
-            the tools needed to run a successful school or office.
+          <p className="text-lg">
+            GoodVibes build long-term professional relationships with our
+            customers that you can rely on & trust.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-14 md:gap-5 mt-20">
           <div
             data-aos="fade-up"
-            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init"
+            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init mb-6"
           >
             <div
               className="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12"
@@ -216,18 +217,21 @@ const HomePage = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
-              Online Billing, Invoicing, &amp; Contracts
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black">
+              IT Consulting
             </h1>
-            <p className="px-4 text-gray-500">
-              Simple and secure control of your organization’s financial and
-              legal transactions. Send customized invoices and contracts
+            <p className="px-4 ">
+              Empower your business with strategic insights and expert guidance.
+              Our IT consulting services are designed to help you navigate
+              complex technological landscapes, optimize operations, and achieve
+              your goals with confidence.
             </p>
           </div>
+
           <div
             data-aos="fade-up"
             data-aos-delay={150}
-            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init"
+            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init mb-6"
           >
             <div
               className="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12"
@@ -289,14 +293,110 @@ const HomePage = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
-              Easy Scheduling &amp; Attendance Tracking
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black">
+              Web Development
             </h1>
-            <p className="px-4 text-gray-500">
-              Schedule and reserve classrooms at one campus or multiple
-              campuses. Keep detailed records of student attendance
+            <p className="px-4 ">
+              Build stunning, user-friendly websites that leave a lasting
+              impression. From dynamic e-commerce platforms to sleek corporate
+              sites, we craft digital experiences that drive engagement and
+              growth.
             </p>
           </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay={300}
+            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init mb-6"
+          >
+            <div
+              className="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12"
+              style={{ background: "rgb(41, 185, 231)" }}
+            >
+              <svg
+                viewBox="0 0 55 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-white"
+              >
+                <path
+                  d="M8.25 19.25C11.2836 19.25 13.75 16.7836 13.75 13.75C13.75 10.7164 11.2836 8.25 8.25 8.25C5.21641 8.25 2.75 10.7164 2.75 13.75C2.75 16.7836 5.21641 19.25 8.25 19.25ZM46.75 19.25C49.7836 19.25 52.25 16.7836 52.25 13.75C52.25 10.7164 49.7836 8.25 46.75 8.25C43.7164 8.25 41.25 10.7164 41.25 13.75C41.25 16.7836 43.7164 19.25 46.75 19.25ZM49.5 22H44C42.4875 22 41.1211 22.6102 40.1242 23.5984C43.5875 25.4977 46.0453 28.9266 46.5781 33H52.25C53.7711 33 55 31.7711 55 30.25V27.5C55 24.4664 52.5336 22 49.5 22ZM27.5 22C32.8195 22 37.125 17.6945 37.125 12.375C37.125 7.05547 32.8195 2.75 27.5 2.75C22.1805 2.75 17.875 7.05547 17.875 12.375C17.875 17.6945 22.1805 22 27.5 22ZM34.1 24.75H33.3867C31.5992 25.6094 29.6141 26.125 27.5 26.125C25.3859 26.125 23.4094 25.6094 21.6133 24.75H20.9C15.4344 24.75 11 29.1844 11 34.65V37.125C11 39.4023 12.8477 41.25 15.125 41.25H39.875C42.1523 41.25 44 39.4023 44 37.125V34.65C44 29.1844 39.5656 24.75 34.1 24.75ZM14.8758 23.5984C13.8789 22.6102 12.5125 22 11 22H5.5C2.46641 22 0 24.4664 0 27.5V30.25C0 31.7711 1.22891 33 2.75 33H8.41328C8.95469 28.9266 11.4125 25.4977 14.8758 23.5984Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black lg:h-14 pt-3">
+              Application Development
+            </h1>
+            <p className="px-4 ">
+              Transform your ideas into powerful, scalable applications. Our
+              team develops custom solutions that enhance efficiency, boost
+              productivity, and adapt to your evolving business needs
+            </p>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay={300}
+            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init mb-6"
+          >
+            <div
+              className="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12"
+              style={{ background: "rgb(41, 185, 231)" }}
+            >
+              <svg
+                viewBox="0 0 55 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-white"
+              >
+                <path
+                  d="M8.25 19.25C11.2836 19.25 13.75 16.7836 13.75 13.75C13.75 10.7164 11.2836 8.25 8.25 8.25C5.21641 8.25 2.75 10.7164 2.75 13.75C2.75 16.7836 5.21641 19.25 8.25 19.25ZM46.75 19.25C49.7836 19.25 52.25 16.7836 52.25 13.75C52.25 10.7164 49.7836 8.25 46.75 8.25C43.7164 8.25 41.25 10.7164 41.25 13.75C41.25 16.7836 43.7164 19.25 46.75 19.25ZM49.5 22H44C42.4875 22 41.1211 22.6102 40.1242 23.5984C43.5875 25.4977 46.0453 28.9266 46.5781 33H52.25C53.7711 33 55 31.7711 55 30.25V27.5C55 24.4664 52.5336 22 49.5 22ZM27.5 22C32.8195 22 37.125 17.6945 37.125 12.375C37.125 7.05547 32.8195 2.75 27.5 2.75C22.1805 2.75 17.875 7.05547 17.875 12.375C17.875 17.6945 22.1805 22 27.5 22ZM34.1 24.75H33.3867C31.5992 25.6094 29.6141 26.125 27.5 26.125C25.3859 26.125 23.4094 25.6094 21.6133 24.75H20.9C15.4344 24.75 11 29.1844 11 34.65V37.125C11 39.4023 12.8477 41.25 15.125 41.25H39.875C42.1523 41.25 44 39.4023 44 37.125V34.65C44 29.1844 39.5656 24.75 34.1 24.75ZM14.8758 23.5984C13.8789 22.6102 12.5125 22 11 22H5.5C2.46641 22 0 24.4664 0 27.5V30.25C0 31.7711 1.22891 33 2.75 33H8.41328C8.95469 28.9266 11.4125 25.4977 14.8758 23.5984Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black lg:h-14 pt-3">
+              Software Testing
+            </h1>
+            <p className="px-4 ">
+              Ensure your software’s reliability, performance, and security with
+              our comprehensive testing services. We provide end-to-end quality
+              assurance to deliver flawless user experiences.
+            </p>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay={300}
+            className="bg-white shadow-xl p-6 text-center rounded-xl aos-init mb-6"
+          >
+            <div
+              className="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12"
+              style={{ background: "rgb(41, 185, 231)" }}
+            >
+              <svg
+                viewBox="0 0 55 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-white"
+              >
+                <path
+                  d="M8.25 19.25C11.2836 19.25 13.75 16.7836 13.75 13.75C13.75 10.7164 11.2836 8.25 8.25 8.25C5.21641 8.25 2.75 10.7164 2.75 13.75C2.75 16.7836 5.21641 19.25 8.25 19.25ZM46.75 19.25C49.7836 19.25 52.25 16.7836 52.25 13.75C52.25 10.7164 49.7836 8.25 46.75 8.25C43.7164 8.25 41.25 10.7164 41.25 13.75C41.25 16.7836 43.7164 19.25 46.75 19.25ZM49.5 22H44C42.4875 22 41.1211 22.6102 40.1242 23.5984C43.5875 25.4977 46.0453 28.9266 46.5781 33H52.25C53.7711 33 55 31.7711 55 30.25V27.5C55 24.4664 52.5336 22 49.5 22ZM27.5 22C32.8195 22 37.125 17.6945 37.125 12.375C37.125 7.05547 32.8195 2.75 27.5 2.75C22.1805 2.75 17.875 7.05547 17.875 12.375C17.875 17.6945 22.1805 22 27.5 22ZM34.1 24.75H33.3867C31.5992 25.6094 29.6141 26.125 27.5 26.125C25.3859 26.125 23.4094 25.6094 21.6133 24.75H20.9C15.4344 24.75 11 29.1844 11 34.65V37.125C11 39.4023 12.8477 41.25 15.125 41.25H39.875C42.1523 41.25 44 39.4023 44 37.125V34.65C44 29.1844 39.5656 24.75 34.1 24.75ZM14.8758 23.5984C13.8789 22.6102 12.5125 22 11 22H5.5C2.46641 22 0 24.4664 0 27.5V30.25C0 31.7711 1.22891 33 2.75 33H8.41328C8.95469 28.9266 11.4125 25.4977 14.8758 23.5984Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black lg:h-14 pt-3">
+              Cloud Migrations
+            </h1>
+            <p className="px-4 ">
+              Seamlessly transition to the cloud with our expert migration
+              services. We help you leverage the power of cloud technology for
+              enhanced flexibility, scalability, and cost-efficiency.
+            </p>
+          </div>
+
           <div
             data-aos="fade-up"
             data-aos-delay={300}
@@ -318,12 +418,13 @@ const HomePage = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken lg:h-14 pt-3">
-              Customer Tracking
+            <h1 className="font-medium text-xl mb-3 lg:px-14 text-black lg:h-14 pt-3">
+              Content Management
             </h1>
-            <p className="px-4 text-gray-500">
-              Automate and track emails to individuals or groups. Skilline’s
-              built-in system helps organize your organization{" "}
+            <p className="px-4 ">
+              Streamline your content workflows and elevate your digital
+              presence. Our content management solutions simplify the creation,
+              organization, and delivery of impactful content.
             </p>
           </div>
         </div>
@@ -332,13 +433,13 @@ const HomePage = () => {
             data-aos="flip-down"
             className="text-center max-w-screen-md mx-auto aos-init"
           >
-            <h1 className="text-3xl font-bold mb-4">
-              What is<span className="text-yellow-500">Skilline?</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Why Choose Us?
             </h1>
-            <p className="text-gray-500">
+            <p className="text-lg">
               GoodVibes is a platform that allows educators to create online
-              classes whereby they can store the course materials online; manage
-              assignments, quizzes and exams; monitor due dates; grade results
+              classes whereby they can store the course materials online, manage
+              assignments, quizzes and exams, monitor due dates, grade results
               and provide students with feedback all in one place.
             </p>
           </div>
@@ -379,19 +480,24 @@ const HomePage = () => {
         </div>
         <div className="sm:flex items-center sm:space-x-8 mt-36">
           <div data-aos="fade-right" className="sm:w-1/2 relative aos-init">
-            <div className="bg-[--main-color] rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse" />
-            <h1 className="font-semibold text-2xl relative z-50 text-darken lg:pr-10">
-              Everything you can do in a physical classroom,{" "}
-              <span className="text-yellow-500">you can do with Skilline</span>
+            {/* <div className="bg-[--main-color] rounded-full absolute w-12 h-12 z-0 -left-4 -top-[60px] animate-pulse" /> */}
+            <h1 className="font-semibold text-4xl md:text-6xl relative z-50 text-darken lg:pr-10">
+              About Us
+              {/* <span className="text-yellow-500"> GoodVibes IT</span> */}
             </h1>
-            <p className="py-5 lg:pr-32">
-              Skilline’s school management software helps traditional and online
-              schools manage scheduling, attendance, payments and virtual
-              classrooms all in one secure cloud-based system.
+            <p className="py-5 text-lg">
+              Welcome to GoodVibes IT , your trusted partner in IT solutions and
+              digital transformation. With a passion for innovation and a
+              commitment to excellence, we specialize in delivering cutting-edge
+              services tailored to meet the unique needs of businesses across
+              industries.
             </p>
-            <a href="" className="underline">
+            <Link
+              href="/contact"
+              className="border px-6 py-3 rounded-3xl hover:border-[--main-color]"
+            >
               Learn More
-            </a>
+            </Link>
           </div>
           <div
             data-aos="fade-left"
@@ -435,7 +541,7 @@ const HomePage = () => {
           </div>
           <div
             data-aos="fade-down"
-            className="md:w-5/12 mt-20 md:mt-0 text-gray-500 aos-init"
+            className="md:w-5/12 mt-20 md:mt-0  aos-init"
           >
             <h1 className="text-2xl font-semibold text-darken lg:pr-40">
               A <span className="text-yellow-500">user interface</span> designed
@@ -530,108 +636,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:space-x-10 mt-16">
-          <div data-aos="fade-right" className="md:w-1/2 lg:pl-14 aos-init">
-            <h1 className="text-darken font-semibold text-3xl lg:pr-56">
-              <span className="text-yellow-500">Tools</span> For Teachers And
-              Learners
-            </h1>
-            <p className="text-gray-500 my-4 lg:pr-32">
-              Class has a dynamic set of teaching tools built to be deployed and
-              used during class. Teachers can handout assignments in real-time
-              for students to complete and submit.
-            </p>
-          </div>
-          <img
-            data-aos="fade-left"
-            src="img/girl-with-books.png"
-            className="md:w-1/2 aos-init"
-          />
-        </div>
-        <div className="mt-20 flex flex-col-reverse md:flex-row items-center md:space-x-10">
-          <div data-aos="fade-right" className="md:w-6/12 aos-init">
-            <img src="img/true-false.png" className="md:w-11/12" />
-          </div>
-          <div
-            data-aos="fade-left"
-            className="md:w-6/12 md:transform md:-translate-y-20 aos-init"
-          >
-            <h1 className="font-semibold text-darken text-3xl lg:pr-64">
-              Assessments, <span className="text-yellow-500">Quizzes</span>,
-              Tests
-            </h1>
-            <p className="text-gray-500 my-5 lg:pr-52">
-              Easily launch live assignments, quizzes, and tests. Student
-              results are automatically entered in the online gradebook.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row items-center mt-12">
-          <div data-aos="fade-right" className="md:w-5/12 aos-init">
-            <h1 className="text-darken font-semibold text-3xl leading-tight lg:pr-32">
-              <span className="text-yellow-500">Class Management</span> Tools
-              for Educators
-            </h1>
-            <p className="my-5 lg:pr-14">
-              Class provides tools to help run and manage the class such as
-              Class Roster, Attendance, and more. With the Gradebook, teachers
-              can review and grade tests and quizzes in real-time.
-            </p>
-          </div>
-          <img
-            data-aos="fade-left"
-            src="img/gradebook.png"
-            className="md:w-7/12 aos-init"
-          />
-        </div>
-        <div className="mt-24 flex flex-col-reverse md:flex-row items-center md:space-x-10">
-          <div data-aos="fade-right" className="md:w-7/12 aos-init">
-            <img src="img/discussion.png" className="md:w-11/12" />
-          </div>
-          <div
-            data-aos="fade-left"
-            className="md:w-5/12 md:transform md:-translate-y-6 aos-init"
-          >
-            <h1 className="font-semibold text-darken text-3xl lg:pr-64">
-              One-on-One <span className="text-yellow-500">Discussions</span>
-            </h1>
-            <p className="text-gray-500 my-5 lg:pr-24">
-              Teachers and teacher assistants can talk with students privately
-              without leaving the Zoom environment.
-            </p>
-          </div>
-        </div>
-        <button
-          data-aos="flip-up"
-          className="px-5 py-3 border border-yellow-500 text-yellow-500 font-medium my-14 btn-zoom rounded-full mx-auto block aos-init"
-        >
-          See more features
-        </button>
-        <div className="mt-24 flex flex-col md:flex-row items-start md:space-x-10">
-          <div data-aos="zoom-in-right" className="md:w-6/12 aos-init">
-            <img src="img/integrations.png" className="md:w-8/12 mx-auto" />
-          </div>
-          <div data-aos="zoom-in-left" className="md:w-6/12 aos-init">
-            <div className="flex items-center space-x-20 mb-5">
-              <span className="border border-gray-300 w-14 absolute" />
-              <h1 className="text-gray-400 tracking-widest text-sm">
-                INTEGRATIONS
-              </h1>
-            </div>
-            <h1 className="font-semibold text-darken text-2xl lg:pr-40">
-              200+ educational tools and platform{" "}
-              <span className="text-yellow-500">integrations</span>
-            </h1>
-            <p className="text-gray-500 my-5 lg:pr-20">
-              Schoology has every tool your classroom needs and comes
-              pre-integrated with more than 200+ tools, student information
-              systems (SIS), and education platforms.
-            </p>
-            <button className="px-5 py-3 border border-yellow-500 text-yellow-500 font-medium my-4 btn-zoom rounded-full">
-              See All Integrations
-            </button>
-          </div>
-        </div>
         <div className="mt-24 flex flex-col-reverse md:flex-row items-start md:space-x-10">
           <div data-aos="zoom-in-right" className="md:w-5/12 aos-init">
             <div className="flex items-center space-x-20 mb-5">
@@ -643,15 +647,15 @@ const HomePage = () => {
             <h1 className="font-semibold text-darken text-2xl lg:pr-40">
               What They Say?
             </h1>
-            <p className="text-gray-500 my-5 lg:pr-36">
+            <p className=" my-5 lg:pr-36">
               GoodVibes has got more than 100k positive ratings from our users
               around the world.
             </p>
-            <p className="text-gray-500 my-5 lg:pr-36">
+            <p className=" my-5 lg:pr-36">
               Some of the students and teachers were greatly helped by the
-              Skilline.
+              GoodVibes.
             </p>
-            <p className="text-gray-500 my-5 lg:pr-36">
+            <p className=" my-5 lg:pr-36">
               Are you too? Please give your assessment
             </p>
             <button className="flex items-center space-x-3 pl-3 border-b border-l border-t border-yellow-500 text-yellow-500 font-medium my-4 btn-zoom rounded-full">
@@ -679,8 +683,8 @@ const HomePage = () => {
           <h1 className="text-darken text-2xl font-semibold">
             Latest News and Resources
           </h1>
-          <p className="text-gray-500 my-5">
-            See the developments that have occurred to Skillines in the world
+          <p className=" my-5">
+            See the developments that have occurred to GoodVibess in the world
           </p>
         </div>
         <div
@@ -696,7 +700,7 @@ const HomePage = () => {
               Class adds $30 million to its balance sheet for a Zoom-friendly
               edtech solution
             </h1>
-            <p className="text-gray-500 mb-3">
+            <p className=" mb-3">
               Class, launched less than a year ago by Blackboard co-founder
               Michael Chasen, integrates exclusively...
             </p>
@@ -722,7 +726,7 @@ const HomePage = () => {
                   Class Technologies Inc. Closes $30 Million Series A Financing
                   to Meet High Demand
                 </h1>
-                <p className="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">
+                <p className=" my-2 sm:my-4 text-xs sm:text-md">
                   Class Technologies Inc., the company that created Class,...
                 </p>
               </div>
@@ -744,7 +748,7 @@ const HomePage = () => {
                   Zooms earliest investors are betting millions on a better Zoom
                   for schools
                 </h1>
-                <p className="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">
+                <p className=" my-2 sm:my-4 text-xs sm:text-md">
                   Zoom was never created to be a consumer product. Nonetheless,
                   the...
                 </p>
@@ -764,7 +768,7 @@ const HomePage = () => {
                   Former Blackboard CEO Raises $16M to Bring LMS Features to
                   Zoom Classrooms
                 </h1>
-                <p className="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">
+                <p className=" my-2 sm:my-4 text-xs sm:text-md">
                   This year, investors have reaped big financial returns from
                   betting on Zoom...
                 </p>
