@@ -21,7 +21,17 @@ export default {
           lg: '1366px', // 1024px max width for large screens
           xl: '1366px', // 1024px max width for extra-large screens
         },
-      }
+      },
+      animation: {
+        marquee: "marquee 36s linear infinite", // Default speed
+        marqueeFast: "marquee 10s linear infinite", // Faster for mobile
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],

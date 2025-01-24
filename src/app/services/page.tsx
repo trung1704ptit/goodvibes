@@ -93,7 +93,7 @@ const ServiceSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border border-[#f1f1f1] rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 h-[450px] flex flex-col"
+              className="border border-[#f1f1f1] rounded-lg overflow-hidden shadow-lg h-[450px] flex flex-col"
             >
               <div className="relative w-full flex-1">
                 <img

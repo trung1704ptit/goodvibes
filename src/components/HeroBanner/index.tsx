@@ -21,12 +21,12 @@ const HeroBanner = (props: IProps) => {
 
     return (
       <div
-        className="bg-cover bg-center min-h-[300px] bg-slate-100 flex items-center justify-center fade-in-up"
+        className="bg-cover bg-center min-h-[300px] bg-blue-light flex items-center justify-center fade-in-up"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-lg m-auto">
-            {title && <h1 className="md:text-7xl text-5xl font-bold mb-3">{title}</h1>}
+            {title && <h1 className="md:text-6xl text-5xl font-bold mb-3">{title}</h1>}
             {breadcrumb && (
               <nav className="text-sm text-gray-300 mb-4">
                 <ul className="flex justify-center space-x-2 text-lg ">

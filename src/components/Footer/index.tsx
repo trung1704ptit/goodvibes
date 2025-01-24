@@ -8,10 +8,9 @@ import Image from "next/image";
 import { menus } from "@/utils/constants";
 import LogoIcon from "../../../public/logo.png";
 
-
 const Footer: React.FC = () => {
   return (
-    <Layout.Footer className="bg-slate-900 text-white p-6 md:py-11">
+    <Layout.Footer className="bg-[#252641] text-white p-6 md:py-11">
       <div className="container mx-auto">
         <Row justify="space-between" align="middle">
           <Col>
@@ -33,7 +32,20 @@ const Footer: React.FC = () => {
         </Row>
         <Row justify="center" className="mt-5">
           <Col>
-            <span>&copy; 2025 Good Vibes IT Solutions. All Rights Reserved.</span>
+            <div className="flex items-center text-gray-400 text-sm justify-center mb-3">
+              <Link href="/careers" className="pr-3">
+                Careers
+              </Link>
+              <Link href="" className="border-l border-gray-400 px-3">
+                Privacy
+              </Link>
+              <Link href="" className="border-l border-gray-400 pl-3">
+                Terms &amp; Conditions
+              </Link>
+            </div>
+            <span>
+              &copy; 2025 Good Vibes IT Solutions. All Rights Reserved.
+            </span>
           </Col>
         </Row>
       </div>

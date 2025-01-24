@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
-import "./globals.css";
+import AOSProvider from "@/components/AOSProvider";
 import AppHeader from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Quicksand } from "next/font/google";
 import { ConfigProvider } from "antd";
+import "./globals.css";
 
 const quicksand = Quicksand({
-  subsets: ['latin'], // You can add more subsets if needed.
-  weight: ['400', '500', '600', '700'], // Select specific font weights.
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
-
 
 export const metadata: Metadata = {
   title: "Good Vibes IT Solutions",
-  description: "At Good Vibes IT Solutions, we specialize in providing comprehensive IT solutions designed to drive your business forward",
+  description:
+    "At Good Vibes IT Solutions, we specialize in providing comprehensive IT solutions designed to drive your business forward",
 };
 
 export default function RootLayout({
@@ -32,9 +33,11 @@ export default function RootLayout({
         }}
       >
         <body className={`${quicksand.className} antialiased`}>
-          <AppHeader />
-          {children}
-          <Footer />
+          <AOSProvider>
+            <AppHeader />
+            {children}
+            <Footer />
+          </AOSProvider>
         </body>
       </ConfigProvider>
     </html>

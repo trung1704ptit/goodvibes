@@ -3,25 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --background: #f3f4f6;
+  --background: #ffffff;
   --foreground: #171717;
   --main-color: #17a2b7;
+  --bg-light: #c4f7ff;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--main-color);
-  font-family: Quicksand;
 }
 
 a:hover {
   color: var(--main-color)
 }
 
+/*primary color*/
+.bg-blue-light {
+  background-color: var(--bg-light);
+}
+
+.bg-yellow-500 {
+  background-color: #F48C06;
+}
+.text-yellow-500 {
+  color: #F48C06;
+}
+.floating { 
+  animation-name: floating; 
+  animation-duration: 3s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: ease-in-out;
+} 
+@keyframes floating { 
+  0% { transform: translate(0, 0px); } 
+  50% { transform: translate(0, 8px); } 
+  100% { transform: translate(0, -0px); }  
+} 
+.floating-4 { 
+  animation-name: floating; 
+  animation-duration: 4s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: ease-in-out;
+} 
+@keyframes floating-4 { 
+  0% { transform: translate(0, 0px); } 
+  50% { transform: translate(0, 8px); } 
+  100% { transform: translate(0, -0px); }  
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+* {
+  font-family: Quicksand;
 }
 
 body {

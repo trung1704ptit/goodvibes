@@ -49,14 +49,11 @@ const AppHeader: React.FC = () => {
   );
 
   return (
-    <header className="w-full bg-white shadow-md z-50">
+    <header className="w-full bg-white shadow-lg z-50" id="app-header">
       <div className="container mx-auto flex items-center justify-between px-4 py-1">
-        {/* Logo */}
         <Link href={"/"}>
           <Image src={logoImg} width={100} height={100} alt="logo" />
         </Link>
-
-        {/* Desktop Menu */}
         {!isMobile && (
           <nav>
             <ul className="flex space-x-6">
@@ -66,7 +63,7 @@ const AppHeader: React.FC = () => {
                   <li key={index}>
                     <Link href={menu.path}>
                       <span
-                        className={`font-medium pb-3 text-lg ${
+                        className={`font-medium pb-3 text-lg outline-none ${
                           isActive
                             ? "text-primary border-b-2 border-[#17a2b7]"
                             : "hover:text-[#17a2b7]"
@@ -82,7 +79,6 @@ const AppHeader: React.FC = () => {
           </nav>
         )}
 
-        {/* Mobile Menu Button */}
         {isMobile && (
           <Button
             className="md:hidden"
@@ -92,7 +88,6 @@ const AppHeader: React.FC = () => {
         )}
       </div>
 
-      {/* Mobile Menu Drawer */}
       <Drawer
         title={
           <Link href={"/"}>
@@ -107,9 +102,7 @@ const AppHeader: React.FC = () => {
         <List
           size="large"
           dataSource={menuMobileItems}
-          renderItem={(item) => (
-            <List.Item>{item}</List.Item>
-          )}
+          renderItem={(item) => <List.Item>{item}</List.Item>}
         />
       </Drawer>
     </header>
