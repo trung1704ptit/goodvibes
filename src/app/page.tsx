@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import BrandsBar from "@/components/BrandsBar";
 import Link from "next/link";
 import React from "react";
 
