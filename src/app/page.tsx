@@ -107,12 +107,12 @@ const HomePage = () => {
         </div>
       </div>
       <div className="container px-4 p-20 mx-auto text-gray-700 overflow-x-hidden">
-        <h1 className="text-center text-xl text-black font-medium mb-10">
+        {/* <h1 className="text-center text-xl text-black font-medium mb-10">
           Trusted by 100+ Companies Worldwide
         </h1>
-        <BrandsBar />
+        <BrandsBar /> */}
 
-        <div className="sm:flex sm:space-x-8 mt-40">
+        <div className="sm:flex sm:space-x-8">
           <div
             data-aos="fade-right"
             className="relative aos-init md:max-w-[50%] text-center md:text-left"
@@ -380,7 +380,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <div
+              {/* <div
                 className="sasly-iconic-box style-two mb-3 aos-init aos-animate bg-white rounded-md p-6 max-w-[400px]"
                 data-aos="fade-down"
                 data-aos-duration={1000}
@@ -395,7 +395,7 @@ const HomePage = () => {
                     earned
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <div
                 className="sasly-iconic-box style-two mb-3 aos-init aos-animate bg-white rounded-md p-6 max-w-[400px]"
