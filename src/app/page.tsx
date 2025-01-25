@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import BrandsBar from "@/components/BrandsBar";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -61,10 +62,15 @@ const HomePage = () => {
               data-aos-once="true"
               className="absolute top-10 -left-6 sm:top-32 sm:left-10 md:top-10 md:left-16 lg:-left-0 lg:top:32 floating-4 aos-init aos-animate"
             >
-              <img
-                src="img/calendar.svg"
-                className="bg-white bg-opacity-80 rounded-lg h-12 sm:h-16"
-              />
+              <div className="bg-white p-3 rounded-lg flex justify-center align-middle">
+                <img
+                  src="/email.png"
+                  className="mr-2"
+                  width={25}
+                  height={"auto"}
+                />
+                1000+ Jobs served
+              </div>
             </div>
             <div
               data-aos="fade-up"
@@ -72,84 +78,7 @@ const HomePage = () => {
               data-aos-once="true"
               className="absolute top-10 right-10 sm:right-24 sm:top-28 md:top-24 md:right-32 lg:top-24 lg:right-16 floating aos-init aos-animate"
             >
-              <svg
-                viewBox="0 0 149 149"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-16 sm:h-24"
-              >
-                <g filter="url(#filter0_d)">
-                  <rect
-                    x={40}
-                    y={32}
-                    width={69}
-                    height={69}
-                    rx={14}
-                    fill="#F3627C"
-                  />
-                </g>
-                <rect
-                  x="51.35"
-                  y="44.075"
-                  width="47.3"
-                  height="44.85"
-                  rx={8}
-                  fill="white"
-                />
-                <path
-                  d="M74.5 54.425V78.575"
-                  stroke="#F25471"
-                  strokeWidth={4}
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M65.875 58.7375L65.875 78.575"
-                  stroke="#F25471"
-                  strokeWidth={4}
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M83.125 63.9125V78.575"
-                  stroke="#F25471"
-                  strokeWidth={4}
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <filter
-                    id="filter0_d"
-                    x={0}
-                    y={0}
-                    width={149}
-                    height={149}
-                    filterUnits="userSpaceOnUse"
-                    colorInterpolationFilters="sRGB"
-                  >
-                    <feFlood floodOpacity={0} result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    />
-                    <feOffset dy={8} />
-                    <feGaussianBlur stdDeviation={20} />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0.825 0 0 0 0 0.300438 0 0 0 0 0.396718 0 0 0 0.26 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow"
-                      result="shape"
-                    />
-                  </filter>
-                </defs>
-              </svg>
+              <img src="business.png" width={60} height={60}/>
             </div>
             <div
               data-aos="fade-up"
@@ -434,7 +363,7 @@ const HomePage = () => {
             className="text-center max-w-screen-md mx-auto aos-init"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose Us?
+              Why Choose Us?
             </h1>
             <p className="text-lg">
               GoodVibes is a platform that allows educators to create online
