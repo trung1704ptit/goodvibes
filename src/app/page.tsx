@@ -159,7 +159,7 @@ const HomePage = () => {
             Our Expertise
           </h1>
           <p className="text-lg fade-up" data-aos="fade-up">
-            GoodVibes build long-term professional relationships with our
+            GoodVibes IT Solutions build long-term professional relationships with our
             customers that you can rely on & trust.
           </p>
         </div>
