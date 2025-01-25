@@ -10,7 +10,7 @@ import LogoIcon from "../../../public/logo.png";
 
 const Footer: React.FC = () => {
   return (
-    <Layout.Footer className="bg-[#252641] text-white p-6 md:py-11">
+    <Layout.Footer className="bg-[#1F1F1F] text-white p-6 md:py-11">
       <div className="container mx-auto">
         <Row justify="space-between" align="middle">
           <Col>
